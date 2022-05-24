@@ -1,0 +1,28 @@
+i{
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.nav-list a:hover{
+    background-color: #059862;
+}
+
+.nav-list a{
+    color: #fff;
+}
+
+.nav{
+    background-color: rgb(0, 0, 0);
+    height: 73%;
+    width: 240px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 47px;
+}
+
+.conteudo{
+    margin-left: 245px;
+    margin-bottom: 30%;
+}

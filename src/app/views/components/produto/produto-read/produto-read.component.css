@@ -1,0 +1,29 @@
+table{
+    width: 100%;
+}
+
+.prod-conf{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.prod-conf button{
+    background-color: 059862;
+    bottom: 10px;
+}
+.prod-conf h1{
+    font-weight: bold;
+
+}
+
+.prod-conf button{
+    background-color: limegreen;
+}
+
+#delete{
+    color: rgb(255, 42, 42);
+    margin-left: 10px;
+    cursor: pointer;
+}
+

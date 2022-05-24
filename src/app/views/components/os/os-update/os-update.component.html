@@ -1,0 +1,46 @@
+<form class="forms">
+    <mat-form-field appearance="fill">
+        <mat-label>Nome do cliente</mat-label>
+        <input [(ngModel)]="os.nome_cliente" [formControl]="nome_cliente" required matInput placeholder="Minervino Soares">
+        <mat-error *ngIf="nome_cliente.invalid">{{erroValidNome()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Telefone do cliente</mat-label>
+        <input [(ngModel)]="os.fone_cliente" [formControl]="fone_cliente" required matInput>
+        <mat-error *ngIf="fone_cliente.invalid">{{erroValidFone()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Endereço do cliente</mat-label>
+        <input [(ngModel)]="os.endereco_cliente" [formControl]="endereco_cliente" required matInput>
+        <mat-error *ngIf="endereco_cliente.invalid">{{erroValidEndereco()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Prioridade</mat-label>
+        <mat-select  [(ngModel)]="os.prioridade" [formControl]="prioridade" required>
+            <mat-option value=0>BAIXA</mat-option>
+            <mat-option value=1>MEDIA</mat-option>
+            <mat-option value=2>ALTA</mat-option>
+        </mat-select>
+        <mat-error *ngIf="prioridade.invalid">{{erroValidPrioridade()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="os.status" [formControl]="status" required>
+            <mat-option value=0>ANDAMENTO</mat-option>
+            <mat-option value=1>PRONTO</mat-option>
+        </mat-select>
+        <mat-error *ngIf="status.invalid">{{erroValidStatus()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Observações</mat-label>
+        <input [(ngModel)]="os.observacoes" [formControl]="observacoes" required matInput>
+        <mat-error *ngIf="observacoes.invalid">{{erroValidObs()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Valor R$</mat-label>
+        <input [(ngModel)]="os.valor" [formControl]="valor" required matInput>
+        <mat-error *ngIf="valor.invalid">{{erroValidValor()}}</mat-error>
+    </mat-form-field>
+    <button (click)="update()" mat-raised-button style="background-color: #059862;">SALVAR</button>
+    <button (click)="cancel()" mat-raised-button color="warn">CANCELAR</button>
+</form>

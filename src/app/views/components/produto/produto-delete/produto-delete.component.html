@@ -1,0 +1,26 @@
+<div class="container mat-elevation-z8">
+    <h1>DELETAR PRODUTO</h1>
+    <form class="form">
+        <mat-form-field aria-disabled="false" class="full-width" appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input [(ngModel)]="produto.nome" [formControl]="nome" required matInput placeholder="Ex: Caneta">
+            <mat-error *ngIf="nome.invalid"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Descrição</mat-label>
+            <input [(ngModel)]="produto.descricao" [formControl]="descricao" required matInput placeholder="Ex: Esferográfica bico fino">
+            <mat-error *ngIf="descricao.invalid"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Preço</mat-label>
+            <input [(ngModel)]="produto.preco" [formControl]="preco" required matInput placeholder="Ex: 2.90">
+            <mat-error *ngIf="preco.invalid"></mat-error>
+        </mat-form-field>
+    </form>
+
+            
+    <button (click)="delete()" mat-raised-button style="background-color: #f73030; color: #fff;">DELETAR</button>
+    <button (click)="cancel()" mat-raised-button style="background-color: #5470eb; color: #fff">CANCELAR</button>
+</div>

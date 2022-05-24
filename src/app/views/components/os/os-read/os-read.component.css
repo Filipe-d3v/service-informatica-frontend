@@ -1,0 +1,64 @@
+table{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.os-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.os-menu h1{
+    font-weight: bold;
+}
+
+#td-id{
+    width: 4%;
+}
+
+#td-data{
+    width: 8%;
+    padding-right: 10px;
+}
+
+#td-nome{
+    width: 11%;
+    padding-right: 10px;
+}
+
+#td-fone{
+    width: 10%;
+}
+
+#td-ende{
+    width: 11%;
+    padding-right: 10px;
+}
+
+#td-prio{
+    width: 6%;
+}
+
+#td-status{
+    width: 9%;
+}
+
+#td-obs{
+    width: 28%;
+    padding-right: 10px;
+}
+
+#td-valor{
+    width: 6%;
+}
+
+#td-action{
+    width: 7%;
+}
+
+.container{
+    padding-bottom: 68px;
+}

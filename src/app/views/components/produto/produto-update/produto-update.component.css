@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 20px;
+    background-color: lavender;
+}
+
+h1{
+    font-weight: bold;
+    color: rgb(19, 83, 202);
+}
+
+.container button{
+   width: 100%;
+   margin: 5px;
+}
+.container .form{
+    width: 100%;
+    border-radius: 1px;
+
+}
+.full-width{ 
+    width: 100%;
+}

@@ -1,0 +1,70 @@
+<div class="os-menu">
+    <h1>ORDENS DE SERVIÇO</h1>
+    <button (click)="navigateToCreate()"  mat-raised-button style="background-color: #059862;">CRIAR NOVA</button>
+</div>
+<div class="mat-elevation-z8 container">
+    <table mat-table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td id="td-id" mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="dataIni">
+        <th mat-header-cell *matHeaderCellDef> Data Início </th>
+        <td id="td-data" mat-cell *matCellDef="let element"> {{element.dataIni}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nome_cliente">
+        <th mat-header-cell *matHeaderCellDef> Nome do cliente</th>
+        <td id="td-nome" mat-cell *matCellDef="let element"> {{element.nome_cliente}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="fone_cliente">
+        <th mat-header-cell *matHeaderCellDef> Fone do cliente </th>
+        <td id="td-fone" mat-cell *matCellDef="let element"> {{element.fone_cliente}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="endereco_cliente">
+        <th mat-header-cell *matHeaderCellDef> Endereço do cliente </th>
+        <td id="td-ende" mat-cell *matCellDef="let element"> {{element.endereco_cliente}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="prioridade">
+        <th mat-header-cell *matHeaderCellDef> Prioridade </th>
+        <td id="td-prio" mat-cell *matCellDef="let element"> {{element.prioridade}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Status </th>
+        <td id="td-status" mat-cell *matCellDef="let element"> {{element.status}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="observacoes">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Observações </th>
+        <td id="td-obs" mat-cell *matCellDef="let element"> {{element.observacoes}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="valor">
+        <th mat-header-cell *matHeaderCellDef> Valor R$ </th>
+        <td id="td-valor" mat-cell *matCellDef="let element" style="text-align: center;"> {{element.valor}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="acoes">
+        <th mat-header-cell *matHeaderCellDef> Ações </th>
+        <td id="td-action" mat-cell *matCellDef="let element"> 
+        <a routerLink="update/{{ element.id }}">
+          <i class="material-icons">edit</i>
+        </a>  
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons 
+                   aria-label="">
+    </mat-paginator>
+  </div>
